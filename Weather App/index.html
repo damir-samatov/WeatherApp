@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/site.webmanifest" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Current Weather</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="color_scheme"></div>
+      <h1 class="title">Real-time Weather Data</h1>
+      <div class="input_div">
+        <input
+          type="text"
+          class=""
+          onkeypress="return /[a-z, а-я, space]/i.test(event.key)"
+          id="inputCity"
+          placeholder="City..."
+        />
+
+        <input
+          type="text"
+          class=""
+          id="inputCountry"
+          onkeypress="return /[a-z, а-я, space]/i.test(event.key)"
+          placeholder="Country..."
+        />
+        <div id="errorSpace" class="empty_city">Please, enter your city*</div>
+        <button id="button">Get Data</button>
+        <div id="error">Error. Please, reenter your city</div>
+      </div>
+      <div class="general">
+        <div class="general_item">
+          <h1 id="city">City</h1>
+          <h1 id="country">Country</h1>
+          <h1 id="temp"><span id="tempIndex">0</span> <sup>o</sup>C</h1>
+          <h1 id="feelsLike">
+            Feels like: <span id="feelsLikeIndex">0</span> <sup>o</sup>C
+          </h1>
+        </div>
+        <div class="general_item">
+          <img id="icon" alt="icon" />
+          <h1 id="mainDescription">Main</h1>
+          <h1 id="description">Description</h1>
+        </div>
+      </div>
+      <div class="details">
+        <div class="details_left">
+          <div class="temp_min_max">
+            <h3>Temperature</h3>
+            <div class="temp_min">
+              Min:
+              <span><span id="tempMinIndex">0</span> <sup>o</sup>C</span>
+            </div>
+            <div class="temp_max">
+              Max:
+              <span><span id="tempMaxIndex">0</span> <sup>o</sup>C</span>
+            </div>
+          </div>
+          <div class="wind">
+            <h3>Wind</h3>
+            <div class="wind_speed">
+              Speed: <span id="windSpeedIndex">0 m/s</span>
+            </div>
+            <div class="wind_direction">
+              Direction: <span id="windDirectionIndex">0 deg</span>
+            </div>
+          </div>
+        </div>
+        <div class="details_right">
+          <div class="humidity">
+            Humidity: <span id="humidityIndex">0 %</span>
+          </div>
+          <div class="pressure">
+            Pressure: <span id="pressureIndex">0 atm</span>
+          </div>
+          <div class="clouds">Clouds: <span id="cloudsIndex">0 %</span></div>
+          <div class="rain">Rain: <span id="rainIndex">0 mm/h</span></div>
+          <div class="snow">Snow: <span id="snowIndex">0 mm/h</span></div>
+          <div class="date">Time: <span id="dateIndex"></span></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
